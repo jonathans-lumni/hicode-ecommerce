@@ -4,7 +4,6 @@ from django.urls import resolve, reverse
 
 pytestmark = pytest.mark.django_db
 
-
 class TestCartAddView:
     def test_reverse_resolve(self, product):
         assert (
@@ -21,7 +20,6 @@ class TestCartAddView:
         assert response.status_code == 302
         assert response.url == "/cart/"
         assert str(product.id) in client.session[settings.CART_SESSION_ID]
-
 
 class TestCartRemoveView:
     def test_reverse_resolve(self, product):
@@ -44,7 +42,6 @@ class TestCartRemoveView:
         assert response.status_code == 302
         assert response.url == "/cart/"
         assert str(product.id) not in client.session[settings.CART_SESSION_ID]
-
 
 class TestCartDetailView:
     def test_reverse_resolve(self, product):
