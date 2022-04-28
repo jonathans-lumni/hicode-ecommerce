@@ -10,3 +10,7 @@ pytest-cov==3.0.0
 pytest-django==4.5.2
 python-decouple==3.6
 sqlparse==0.4.2
+mercadopago==2.1.0
+django-environ==0.8.1
+pytest-mock==3.7.0
+requests==2.27.1
